@@ -15,5 +15,5 @@
 | F | Reset Image |
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/visualMasking.js" width="734" height="744" >}}
+{{< p5-iframe sketch="/showcase/sketches/visualMasking.js" width="600" height="900" >}}
 
