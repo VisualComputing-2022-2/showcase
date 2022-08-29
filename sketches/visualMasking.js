@@ -50,7 +50,8 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(600, 900);    
+	createCanvas(600, 900);
+	background(255);
 	pixelDensity(1);
 }
 
