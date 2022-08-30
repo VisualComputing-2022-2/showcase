@@ -127,7 +127,7 @@ function drawHistogram(){
 }
 
 function convolveImage(kernel, kernelSize) {
-    
+    clear();
 	img.copy(
 		file,
 		0,
@@ -162,6 +162,31 @@ function convolveImage(kernel, kernelSize) {
 
 }
 
+function changeBrigness(changeFlag) {
+    clear();
+    img.loadPixels();
+    
+    for (let x = 0; x < img.width; x++) {
+        for(let y = 0; y < img.height; y++) {
+            let loc = (x + y * img.width) * 4;
+            if(changeFlag){
+                img.pixels[loc] = constrain(img.pixels[loc]/1.1 , 0, 255);
+			    img.pixels[loc + 1] = constrain(img.pixels[loc+1]/1.1 , 0, 255);
+			    img.pixels[loc + 2] = constrain(img.pixels[loc+2]/1.1 , 0, 255);
+            }else{
+                img.pixels[loc] = constrain(img.pixels[loc]*1.1 , 0, 255);
+                img.pixels[loc + 1] = constrain(img.pixels[loc+1]*1.1 , 0, 255);
+                img.pixels[loc + 2] = constrain(img.pixels[loc+2]*1.1 , 0, 255);
+            }
+
+        }
+    }
+
+    img.updatePixels();
+    drawHistogram();
+
+}
+
 
 
 function resetImage() {
@@ -181,28 +206,24 @@ function resetImage() {
 
 function keyPressed() {
 	if (key == "v") {
-        clear();
 		convolveImage(verticalEdge, 3);
 	} else if (key == "h") {
-		clear();
     	convolveImage(horizontalEdge, 3);
 	} else if (key == "e") {
-        clear();
 		convolveImage(edgeKernel, 3);
 	} else if (key == "b") {
-        clear();
 		convolveImage(boxKernel, 3);
 	} else if (key == "s") {
-        clear();
 		convolveImage(sharpenKernel, 3);
 	} else if (key == "g") {
-        clear();
 		convolveImage(gaussianKernel, 3);
 	} else if (key == "z") {
-        clear();
 		convolveImage(sobelKernel, 3);
 	} else if (key == "f") {
-        clear();
 		resetImage();
-	}
+	}else if(key == "c"){
+        changeBrigness(true);
+    }else if(key == "d"){
+        changeBrigness(false);
+    }
 }
