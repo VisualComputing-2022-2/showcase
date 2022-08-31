@@ -88,7 +88,8 @@ function calculateConvolution(x, y, kernel, kernelSize) {
 }
 
 function drawHistogram(){
-
+    clear();
+    background(255);
     var maxRange = 256
     colorMode(HSL, maxRange);
 
@@ -127,7 +128,6 @@ function drawHistogram(){
 }
 
 function convolveImage(kernel, kernelSize) {
-    clear();
 	img.copy(
 		file,
 		0,
@@ -163,7 +163,6 @@ function convolveImage(kernel, kernelSize) {
 }
 
 function changeBrigness(changeFlag) {
-    clear();
     img.loadPixels();
     
     for (let x = 0; x < img.width; x++) {
