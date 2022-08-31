@@ -1,4 +1,4 @@
-# Illusions 1 To 3
+# Illusions
 
 ## "Stepping Feet" Motion Illusion
 
