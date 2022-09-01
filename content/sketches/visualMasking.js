@@ -60,7 +60,6 @@ function draw() {
     img.resize(0,600);
     file.resize(0,600);
 	image(img, 0, 0, img.width, img.height);
-    //drawHistogram();
 }
 
 function calculateConvolution(x, y, kernel, kernelSize) {
@@ -128,19 +127,10 @@ function drawHistogram(){
 }
 
 function convolveImage(kernel, kernelSize) {
-	img.copy(
-		file,
-		0,
-		0,
-		file.width,
-		file.height,
-		0,
-		0,
-		file.width,
-		file.height
-	);
+	img.copy(file, 0, 0, file.width, file.height, 0, 0, file.width, file.height);
 
 	img.loadPixels();
+
 
 	for (let x = 1; x < img.width - 1; x++) {
 		for (let y = 1; y < img.height - 1; y++) {
@@ -163,6 +153,7 @@ function convolveImage(kernel, kernelSize) {
 }
 
 function changeBrigness(changeFlag) {
+
     img.loadPixels();
     
     for (let x = 0; x < img.width; x++) {
@@ -189,40 +180,43 @@ function changeBrigness(changeFlag) {
 
 
 function resetImage() {
-	img.copy(
-		file,
-		0,
-		0,
-		file.width,
-		file.height,
-		0,
-		0,
-		file.width,
-		file.height
-	);
+	img.copy(file, 0, 0, file.width, file.height, 0, 0, file.width, file.height);
 	drawHistogram();
 }
 
 function keyPressed() {
-	if (key == "v") {
-		convolveImage(verticalEdge, 3);
-	} else if (key == "h") {
-    	convolveImage(horizontalEdge, 3);
-	} else if (key == "e") {
-		convolveImage(edgeKernel, 3);
-	} else if (key == "b") {
-		convolveImage(boxKernel, 3);
-	} else if (key == "s") {
-		convolveImage(sharpenKernel, 3);
-	} else if (key == "g") {
-		convolveImage(gaussianKernel, 3);
-	} else if (key == "z") {
-		convolveImage(sobelKernel, 3);
-	} else if (key == "f") {
-		resetImage();
-	}else if(key == "c"){
-        changeBrigness(true);
-    }else if(key == "d"){
-        changeBrigness(false);
+
+    switch (key) {
+        case "v":
+            convolveImage(verticalEdge, 3);
+            break;
+        case "h":
+            convolveImage(horizontalEdge, 3);
+            break;
+        case "e":
+            convolveImage(edgeKernel, 3);
+            break;
+        case "b":
+            convolveImage(boxKernel, 3);
+            break;
+        case "s":
+            convolveImage(sharpenKernel, 3);
+            break;
+        case "g":
+            convolveImage(gaussianKernel, 3);
+            break;
+        case "z":
+            convolveImage(sobelKernel, 3);
+            break;
+        case "f":
+            resetImage();
+            break;
+        case "c":
+            changeBrigness(true);
+            break;
+        case "d":
+            changeBrigness(false);
+            break;
     }
+
 }

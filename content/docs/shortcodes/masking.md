@@ -3,7 +3,7 @@
 ## Image Kernels
 
 {{< details "Shortcuts" >}}
-| Shortcode | Description |
+| Shortcut | Description |
 | -------- | ----------- |
 | V | Vertical Edge|
 | H | Horizontal Edge|
@@ -17,5 +17,5 @@
 | D | - Brightness |
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/visualMasking.js" width="600" height="900" >}}
+{{< p5-iframe sketch="/showcase/sketches/visualMasking.js" width="612" height="925" >}}
 
