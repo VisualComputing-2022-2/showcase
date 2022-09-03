@@ -1,10 +1,60 @@
-<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content=" Convolution Masking # Image Kernels # Shortcuts Shortcut Description V Vertical Edge H Horizontal Edge E Edge Kernel B Box Kernel S Sharpen Kernel G Gaussian Kernel Z Sobel Kernel F Reset Image C + Brightness D - Brightness "><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content=" Convolution Masking # Image Kernels # Shortcuts Shortcut Description V Vertical Edge H Horizontal Edge E Edge Kernel B Box Kernel S Sharpen Kernel G Gaussian Kernel Z Sobel Kernel F Reset Image C + Brightness D - Brightness "><meta property="og:type" content="article"><meta property="og:url" content="https://visualcomputing-2022-2.github.io/showcase/docs/shortcodes/masking/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2022-08-31T20:52:15-05:00"><title>Masking | Showcase Template</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
-<script defer src=/showcase/en.search.min.d738e5aa6ae69a3a5031a2be052d0a3c32004bfd6798176e49b58a6e3b48daad.js integrity="sha256-1zjlqmrmmjpQMaK+BS0KPDIAS/1nmBduSbWKbjtI2q0=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Image Kernels # What is a Convolution? # In image processing, convolution is the process of transforming an image by applying a kernel over each pixel and its local neighbors across the entire image.
+The Convolution Process involves those two steps.
+It places the Kernel Matrix over each pixel of the image, multiplies each value of the Kernel with the corresponding pixel it is over. Sums the resulting multiplied values and returns the resulting value as the new value of the center pixel."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Image Kernels # What is a Convolution? # In image processing, convolution is the process of transforming an image by applying a kernel over each pixel and its local neighbors across the entire image.
+The Convolution Process involves those two steps.
+It places the Kernel Matrix over each pixel of the image, multiplies each value of the Kernel with the corresponding pixel it is over. Sums the resulting multiplied values and returns the resulting value as the new value of the center pixel."><meta property="og:type" content="article"><meta property="og:url" content="https://visualcomputing-2022-2.github.io/showcase/docs/shortcodes/masking/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2022-09-03T18:58:32-05:00"><title>Masking | Showcase Template</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
+<script defer src=/showcase/en.search.min.7c6bf2396dfe84bc54cdd7f395d772d52e46e2fafd3c99d1842f7d1a06979e83.js integrity="sha256-fGvyOW3+hLxUzdfzlddy1S5G4vr9PJnRhC99GgaXnoM=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/showcase/><span>Showcase Template</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><span>Shortcodes</span><ul><li><a href=/showcase/docs/shortcodes/illusions/illusions/>Illusions</a></li><li><a href=/showcase/docs/shortcodes/masking/ class=active>Masking</a></li></ul></li></ul><ul><li><a href=/showcase/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/showcase/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>Masking</strong>
-<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#convolution-masking>Convolution Masking</a><ul><li><a href=#image-kernels>Image Kernels</a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=convolution-masking>Convolution Masking
-<a class=anchor href=#convolution-masking>#</a></h1><h2 id=image-kernels>Image Kernels
-<a class=anchor href=#image-kernels>#</a></h2><details><summary>Shortcuts</summary><div class=markdown-inner><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody><tr><td>V</td><td>Vertical Edge</td></tr><tr><td>H</td><td>Horizontal Edge</td></tr><tr><td>E</td><td>Edge Kernel</td></tr><tr><td>B</td><td>Box Kernel</td></tr><tr><td>S</td><td>Sharpen Kernel</td></tr><tr><td>G</td><td>Gaussian Kernel</td></tr><tr><td>Z</td><td>Sobel Kernel</td></tr><tr><td>F</td><td>Reset Image</td></tr><tr><td>C</td><td>+ Brightness</td></tr><tr><td>D</td><td>- Brightness</td></tr></tbody></table></div></details><iframe id=visualMasking style=width:612px;height:925px srcdoc="
+<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#image-kernels>Image Kernels</a><ul><li><a href=#what-is-a-convolution>What is a Convolution?</a></li><li><a href=#what-is-a-kernel>What is a Kernel?</a><ul><li><a href=#kernels-used-in-this-example>Kernels Used in this Example:</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=image-kernels>Image Kernels
+<a class=anchor href=#image-kernels>#</a></h1><h2 id=what-is-a-convolution>What is a Convolution?
+<a class=anchor href=#what-is-a-convolution>#</a></h2><p>In image processing, convolution is the process of transforming an image by applying a kernel over each pixel and its local neighbors across the entire image.</p><p>The Convolution Process involves those two steps.</p><ul><li>It places the Kernel Matrix over each pixel of the image, multiplies each value of the Kernel with the corresponding pixel it is over.</li><li>Sums the resulting multiplied values and returns the resulting value as the new value of the center pixel. This process is repeated for each pixel in the image.</li></ul><h2 id=what-is-a-kernel>What is a Kernel?
+<a class=anchor href=#what-is-a-kernel>#</a></h2><p>A kernel is in fact a matrix with an M x N dimension that is smaller than the image matrix. The kernel is also known as the convolution matrix and it&rsquo;s used for the tasks like blurring, sharpening, edge-detection and similar image processing tasks.</p><h3 id=kernels-used-in-this-example>Kernels Used in this Example:
+<a class=anchor href=#kernels-used-in-this-example>#</a></h3><ol><li><p><strong>The Prewitt Operator:</strong>
+Can be used for both vertical and horizontal edge detection.</p><ul><li>Vertical
+<link rel=stylesheet href=/showcase/katex/katex.min.css><script defer src=/showcase/katex/katex.min.js></script>
+<script defer src=/showcase/katex/auto-render.min.js onload=renderMathInElement(document.body)></script><span>
+\( \begin{bmatrix}
+1 & 0 & -1\\
+1 & 0 & -1\\
+1 & 0 & -1
+\end{bmatrix}
+\)</span></li><li>Horizontal
+<span>\( \begin{bmatrix}
+1 & 1 & 1\\
+0 & 0 & 0\\
+-1 & -1 & -1
+\end{bmatrix}
+\)</span></li></ul></li><li><p><strong>The Sobel Operator:</strong> The Sobel operator emphasizes the edges more than the Prewitt operator by replacing 1’s in the central column with 2’s.</p><ul><li>Vertical
+<span>\( \begin{bmatrix}
+1 & 0 & -1\\
+2 & 0 & -2\\
+1 & 0 & -1
+\end{bmatrix}
+\)</span></li><li>Horizontal
+<span>\( \begin{bmatrix}
+1 & 2 & 1\\
+0 & 0 & 0\\
+-1 & -2 & -1
+\end{bmatrix}
+\)</span></li></ul></li><li><p><strong>Box:</strong> The box kernel is a simple filter that calculates the mean of the pixels in the area covered by the filter. This also has a smoothing effect.<br><span>\( \frac{1}{9}
+\begin{bmatrix}
+1 & 1 & 1\\
+1 & 1 & 1\\
+1 & 1 & 1
+\end{bmatrix}
+\)</span></p></li><li><p><strong>Gaussian:</strong> The Gaussian kernel is a filter that calculates the weighted mean of the pixels in the area covered by the filter, it&rsquo;s used to blur an image.<br><span>\( \frac{1}{16}
+\begin{bmatrix}
+1 & 2 & 1\\
+2 & 4 & 2\\
+1 & 2 & 1
+\end{bmatrix}
+\)</span></p></li><li><p><strong>Sharpen:</strong> The sharpen kernel is a filter thah emphasizes differences in adjacent pixel values. This makes the image look more vivid.<br><span>\( \begin{bmatrix}
+0 & -1 & 0\\
+-1 & 5 & -1\\
+0 & -1 & 0
+\end{bmatrix}
+\)</span></p></li></ol><details><summary>Shortcuts</summary><div class=markdown-inner><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody><tr><td>V</td><td>Vertical Edge</td></tr><tr><td>H</td><td>Horizontal Edge</td></tr><tr><td>E</td><td>Edge Kernel</td></tr><tr><td>B</td><td>Box Kernel</td></tr><tr><td>S</td><td>Sharpen Kernel</td></tr><tr><td>G</td><td>Gaussian Kernel</td></tr><tr><td>Z</td><td>Sobel Kernel</td></tr><tr><td>F</td><td>Reset Image</td></tr><tr><td>C</td><td>+ Brightness</td></tr><tr><td>D</td><td>- Brightness</td></tr></tbody></table></div></details><iframe id=visualMasking style=width:612px;height:925px srcdoc="
         <!DOCTYPE html>
         <html>
           <head>
@@ -20,5 +70,5 @@
           <body>
           </body>
         </html>
-      "></iframe></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/VisualComputing-2022-2/showcase/commit/a160019d22607c0f9be2b7ca6b94acd280c7a3e7 title='Last modified by jcvillotab | September 1, 2022' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
-<span>September 1, 2022</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#convolution-masking>Convolution Masking</a><ul><li><a href=#image-kernels>Image Kernels</a></li></ul></li></ul></nav></div></aside></main></body></html>
+      "></iframe></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/VisualComputing-2022-2/showcase/commit/41b22744b054feac53e800bbce37d3a9655343bb title='Last modified by jcvillotab | September 3, 2022' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
+<span>September 3, 2022</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#image-kernels>Image Kernels</a><ul><li><a href=#what-is-a-convolution>What is a Convolution?</a></li><li><a href=#what-is-a-kernel>What is a Kernel?</a><ul><li><a href=#kernels-used-in-this-example>Kernels Used in this Example:</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>
