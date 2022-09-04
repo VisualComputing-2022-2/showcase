@@ -2,7 +2,7 @@ let bars = true;
 function setup() {
   createCanvas(400, 400);
   
-  button = createButton('Barras');
+  button = createButton('Bars');
   button.position(0, 0);
   button.mousePressed(changeBG);
 }
