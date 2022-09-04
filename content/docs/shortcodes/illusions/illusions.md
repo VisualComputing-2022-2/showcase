@@ -4,9 +4,9 @@
 
 {{< p5-iframe sketch="/showcase/sketches/illusions/steppingFeetMotionIllusion.js" width="750" height="450" >}}
 
-## Pyramid dIllusion
+## Pyramid Dillusion
 
-{{< p5-iframe sketch="/showcase/sketches/illusions/pyramidIllusion.js" width="500" height="500" >}}
+{{< p5-iframe sketch="/showcase/sketches/illusions/pyramidIllusion.js" width="525" height="525" >}}
 
 ## "Breathing Square" Illusion
 
@@ -14,8 +14,8 @@
 
 ## White Xmas Illusion
 
-{{< p5-iframe sketch="/showcase/sketches/illusions/whiteXmas.js" width="400" height="400" >}}
+{{< p5-iframe sketch="/showcase/sketches/illusions/whiteXmas.js" width="425" height="425" >}}
 
 ## Flash-Lag Effect
 
-{{< p5-iframe sketch="/showcase/sketches/illusions/flashLagEffect.js" width="400" height="400" >}}
+{{< p5-iframe sketch="/showcase/sketches/illusions/flashLagEffect.js" width="425" height="425" >}}
