@@ -6,7 +6,7 @@ let esquinas = true;//Con o sin los amarillos
 function setup() { 
   createCanvas(700, 700);
   rectMode(CENTER);
-  button = createButton('Esquinas');
+  button = createButton('Corners');
   button.position(0, 0);
   button.mousePressed(changeBG);
 } 

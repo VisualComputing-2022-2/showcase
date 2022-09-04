@@ -30,10 +30,31 @@ The bar located at the top allows you to modify the number of overlapping square
 
 {{< p5-iframe sketch="/showcase/sketches/illusions/breathingSquareIllusion.js" width="725" height="725" >}}
 
+This illusion is one of several effects in which a rigid object is shown moving behind small apertures. The object appears to change size or shape as it moves. In this case the apertures become progressively narrower and wider as a square rotates behind them, and the square appears to expand and contract rhythmically that is why is called a breathe.
+
+It is possible to make the squares that move from each of the corners disappear by means of the "corners" button. In this way the so-called "breathing" disappears, showing what is simply a normal rotation of a square with fixed size
+
 ## White Xmas Illusion
 
 {{< p5-iframe sketch="/showcase/sketches/illusions/whiteXmas.js" width="425" height="425" >}}
 
+In this illusion there are only three different colors however apparently each of the trees has a different shade of green.
+
+The difference between each of the two trees is only that one of them is under the yellow bars while the other one is under the green bars.
+
+In this case it is possible to make the horizontal bars disappear by means of the "bars" button located at the top. When the bars disappear, it is possible to verify the color parity of the trees.
+
+
 ## Flash-Lag Effect
 
 {{< p5-iframe sketch="/showcase/sketches/illusions/flashLagEffect.js" width="425" height="425" >}}
+
+This illusion is an example of the “flash-lag” effect. 
+
+Where the two lines nearly meet, the flashing line appears to lag a little behind the other line.
+
+The flashing line seem to have a different angle, where they meet there’s a kink.
+
+Our mental perception and planning mechanisms need to consider the delays in afference, computation & efference. Thus, moving objects are perceived a bit ahead of their assumed trajectory; the flash (because it is stationary) is not. Consequently, one perceives a positional disparity between briefly flashed stationary and moving objects.
+
+For this illusion we have a bar with which we can control the speed of the rotation of the line that is always visible When the speed is higher the effect is much clearer
