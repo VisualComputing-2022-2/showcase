@@ -1,10 +1,10 @@
 var x = 0; //Rotación
 let t = 0; //Velociad de los amarillos
-let t2 = 750;//Tamaño maximo de los amarillos
+let t2 = 650;//Tamaño maximo de los amarillos
 let esquinas = true;//Con o sin los amarillos
 
 function setup() { 
-  createCanvas(800, 800);
+  createCanvas(700, 700);
   rectMode(CENTER);
   button = createButton('Esquinas');
   button.position(0, 0);
@@ -34,11 +34,11 @@ function draw() {
   }
   //Si el tamaño de los amarillos llega al limite deseado, volvemos a t negativo
   //lo que hace que el tamñao empiece a decrecer hasta que entre al proximo if y se repite.
-  if(t2==750){
+  if(t2==650){
     t=-0.25;
   }
 
-  if(t2==500){
+  if(t2==400){
     t=0.25;
    } 
   t2 = t2+t
