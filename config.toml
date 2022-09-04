@@ -1,6 +1,6 @@
 baseURL = "https://visualcomputing-2022-2.github.io/showcase"
 languageCode = "en-us"
-title = "Showcase Template"
+title = "Visual Computing Reports"
 theme = 'book'
 
 # Book configuration
@@ -34,4 +34,3 @@ enableGitInfo = true
   # Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
   # Theme will print warning if page referenced in markdown does not exists.
   BookPortableLinks = false
-

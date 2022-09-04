@@ -99,3 +99,10 @@ A kernel is in fact a matrix with an M x N dimension that is smaller than the im
 
 {{< p5-iframe sketch="/showcase/sketches/visualMasking.js" width="612" height="925" >}}
 
+## About the histogram
+
+As you can see, as the different filters (kernels) area applied, the color composition of the image changes as well. This is also true for changes in the brightness.
+
+The histogram shows the frequency of the colors in the image. Note that as the image gets darker, we get more colors at the left of the diagram, and as the image gets brighter, we get more colors at the right.
+
+
