@@ -1,6 +1,6 @@
 var steps = 0
 function setup() {
-    createCanvas(500, 500);
+    createCanvas(700, 700);
     rectMode(CENTER);
     slider = createSlider(0, 20 ,1, 1)
     slider.position(0, 0);
