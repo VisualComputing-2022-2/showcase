@@ -3,9 +3,9 @@ let bars = true;//Con barras o sin barras
 let d2 = 0;//Valor para seber si los rectangulos iran hacia adelante o hacia atras
 
 function setup() {
-  createCanvas(800, 500);
+  createCanvas(700, 600);
   
-  button = createButton('Barras');
+  button = createButton('Grid');
   button.position(0, 0);
   button.mousePressed(changeBG);
 }

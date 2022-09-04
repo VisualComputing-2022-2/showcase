@@ -2,7 +2,7 @@
 
 ## "Stepping Feet" Motion Illusion
 
-{{< p5-iframe sketch="/showcase/sketches/illusions/steppingFeetMotionIllusion.js" width="750" height="450" >}}
+{{< p5-iframe sketch="/showcase/sketches/illusions/steppingFeetMotionIllusion.js" width="725" height="625" >}}
 
 ## Pyramid Dillusion
 
