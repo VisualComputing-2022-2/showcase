@@ -6,13 +6,17 @@ function setup() {
   createCanvas(700, 600);
   
   button = createButton('Grid');
-  button.position(0, 0);
+  button.position(width+10, 10);
   button.mousePressed(changeBG);
+  colorPickerRect1 = createColorPicker('#00004C');
+  colorPickerRect1.position(width+10, 50);
+  colorPickerRect2 = createColorPicker('#FFFF00');
+  colorPickerRect2.position(width+10, 100);
 }
 
 function draw() {
   
-  if(bars){//Dejo un fondo blanco y agrego barras negras
+  if(bars){//Dejo un fondo negro y agrego barras blancas
     
   background(0)
   
@@ -30,13 +34,13 @@ function draw() {
   //Dibujando los rectangulos que se moveran
   
   push();
-  fill(0,0,76)
+  fill(colorPickerRect1.color())
   rect(d2,(height/5)*2,(width/30)*2, 25)
   pop();
   
   push();
-  fill(255,255,0)
-  stroke(255,255,0)
+  fill(colorPickerRect2.color())
+  stroke(colorPickerRect2.color())
   rect(d2,(height/5)*3,(width/30)*2, 25)
   pop();
   
