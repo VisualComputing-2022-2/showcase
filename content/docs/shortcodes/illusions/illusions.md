@@ -2,7 +2,7 @@
 
 ## "Stepping Feet" Motion Illusion
 
-{{< p5-iframe sketch="/showcase/sketches/illusions/steppingFeetMotionIllusion.js" width="725" height="625" >}}
+{{< p5-iframe sketch="/showcase/sketches/illusions/steppingFeetMotionIllusion.js" width="775" height="625" >}}
 
 It was demonstrated by Stuart Anstis in 2003. 
 
