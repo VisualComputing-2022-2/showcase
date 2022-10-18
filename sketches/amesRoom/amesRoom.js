@@ -3,9 +3,11 @@ var angle=3;
 var tallBoxes=true;
 var tallCones=false;
 var tallTorus=false;
+var compare=false;
 
 function setup() {
     createCanvas(600, 400,WEBGL);
+    createEasyCam({distance : 150, center:[0,-46,0]});
 }
 
 function rotateXaxis(angle){  
@@ -21,8 +23,8 @@ function draw() {
     background(175);
     angleMode(DEGREES);
 
+  rotateXaxis(-84);
   //rotateX(angle);
-  //rotateX(84);
   //rotateX(82);
   //rotateY(1.5);
 
@@ -93,7 +95,23 @@ function draw() {
 
 
 function drawTallBoxes(){  
-  //figura del fondo
+  
+  if(compare){
+    //figura del fondo
+    push();
+    translate(8,95,26);
+    fill(120);
+    box(10, 10, 50);
+    pop();
+    
+    //figura de adelante
+    push();
+    translate(73,95,26);
+    fill(120);
+    box(10, 10, 50);
+    pop(); 
+  }else{
+   //figura del fondo
     push();
     translate(8,18,26);
     fill(120);
@@ -102,45 +120,87 @@ function drawTallBoxes(){
     
     //figura de adelante
     push();
-    translate(73,63,31);
+    translate(73,72,31);
     fill(120);
     box(10, 10, 50);
-    pop();     
+    pop(); 
+  }
+       
 }
 
 function drawTallCones(){  
-  //figura del fondo
+  if(compare){
+    //figura del fondo
     push();
-    translate(8,18,26);
+    translate(8,95,26);
+    rotateXaxis(-90)
     fill(0);
     cone(5, 50);  
     pop();
     
     //figura de adelante
     push();
-    translate(73,63,31);
+    translate(73,95,26);
+    rotateXaxis(-90)
     fill(0);
     cone(5, 50);
-    pop();     
-}
-
-function drawTorus(){  
-  //figura del fondo
-    
+    pop();   
+  }else{
+   //figura del fondo
     push();
-    rotateXaxis(-90);
     translate(8,18,26);
+    rotateXaxis(-90)
     fill(0);
-    torus(10, 4); 
+    cone(5, 50);  
     pop();
     
     //figura de adelante
     push();
-    rotateXaxis(-90);
-    translate(73,63,31);
+    translate(73,70,31);
+    rotateXaxis(-90)
     fill(0);
-    torus(10, 4);
-    pop();     
+    cone(5, 50);
+    pop();    
+  }
+    
+}
+
+function drawTorus(){  
+  
+    if(compare){
+      //figura del fondo
+      push();
+      translate(15,95,15);
+      rotateXaxis(-90);
+      fill(0);
+      torus(10, 4); 
+      pop();
+
+      //figura de adelante
+      push();
+      translate(66,95,15);
+      rotateXaxis(-90);
+      fill(0);
+      torus(10, 4);
+      pop();  
+    }else{
+      //figura del fondo
+      push();
+      translate(15,25,15);
+      rotateXaxis(-90);
+      fill(0);
+      torus(10, 4); 
+      pop();
+
+      //figura de adelante
+      push();
+      translate(66,63,20);
+      rotateXaxis(-90);
+      fill(0);
+      torus(10, 4);
+      pop();  
+    }
+         
 }
 
 
@@ -168,6 +228,9 @@ function keyPressed() {
             break;            
         case "r":
             resetFigures();            
+            break;
+        case "f":
+            compare = !compare          
             break;
     }
 }
