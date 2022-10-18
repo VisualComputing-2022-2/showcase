@@ -9,6 +9,13 @@ Ames also developed the concept of "transactional ambiguity" holding that "menta
 In 1954, Ames was awarded an honorary Doctor of Laws by Dartmouth. In 1955 he won the Tillyer Medal, awarded by the Optical Society of America. Ames died on July 3, 1955, and was buried at the Dartmouth Cemetery.[6] His name, and that of his siblings, is also inscribed on the gravestone of his parents at the Hildreth family cemetery in Lowell.
 In the address given on the presentation of the Tillyer Medal, the president of the society listed 38 books and scientific papers Ames wrote, and 21 patents awarded to Ames.
 
-## Window
-
 ## Room
+{{< details "Commands" >}}
+| Key | Description |
+| -------- | ----------- |
+| b| Boxes|
+| c | Cones|
+| t | torus |
+| r | reset |
+{{< /details >}}
+{{< p5-iframe sketch="/showcase/sketches/amesRoom/amesRoom.js" width="620" height="450" >}}
