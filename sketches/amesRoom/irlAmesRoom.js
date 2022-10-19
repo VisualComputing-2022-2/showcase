@@ -1,5 +1,5 @@
 function preload() {
-	file = loadImage("http://1.bp.blogspot.com/_u-LXMEsMK5Y/TBBDO_n7dLI/AAAAAAAAABw/6N_puS2taAQ/s1600/ames+room.jpg");	
+	file = loadImage("https://i.imgur.com/sNrljjS.jpg");	
 }
 function setup() {
 	createCanvas(556, 414);
