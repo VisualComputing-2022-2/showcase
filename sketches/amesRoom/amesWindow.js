@@ -1,7 +1,7 @@
 let img;
 
 function preload(){
-  img = loadImage('content/docs/shortcodes/resources/images/window.jpg')
+  img = loadImage('https://i.imgur.com/zrcaKGs.jpg')
 }
 
 function setup() {
@@ -16,4 +16,4 @@ function draw() {
   noStroke();
   //image(img);
   texture(img);
-}
+}5
