@@ -1,7 +1,7 @@
 let img;
 
 function preload(){
-  img = loadImage('13.jpg')
+  img = loadImage('content/docs/shortcodes/resources/images/window.jpg')
 }
 
 function setup() {
