@@ -35,3 +35,12 @@ In 1954, Ames was awarded an honorary Doctor of Laws by Dartmouth. In 1955 he wo
 {{< p5-iframe sketch="/showcase/sketches/amesRoom/amesRoom.js" width="620" height="450" >}}
 
 ## Conclusions
+
+</center>
+<ul>
+  <li>When three-dimensional scenes are built on two-dimensional canvases (the screen in this case) it is necessary to consider several concepts, among them are the frontal, oblique and aerial perspectives, each one of them with its characteristic vanishing points, in addition to the important line of the horizon. The proper use of the above concepts allows realistically capture a three-dimensional scenario.</li>
+
+  <li>In the construction of simulated scenarios, it is possible to save resources through perceptive games that trick the viewer into not being able to notice any difference between a complete scenario and another that simply appears to be.</li>
+  
+  <li>The perception of reality is subjective, selective, and temporary so that, if a conflict or knot appears that does not allow an individual to fully understand it, a dialogic process begins with the environment, trying to make a readjustment in his experience. That is why, despite creating images that are not totally faithful, they are totally real, since it is the individual impression that builds the true perception of the world.</li>
+</ul>
