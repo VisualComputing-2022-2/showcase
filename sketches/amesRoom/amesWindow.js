@@ -6,6 +6,7 @@ function preload(){
 
 function setup() {
   createCanvas(500, 400, WEBGL);
+  createEasyCam({distance : 150, center:[0,-46,0]});
 }
 
 function draw() {
