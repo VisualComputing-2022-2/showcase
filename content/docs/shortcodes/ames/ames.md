@@ -13,6 +13,10 @@ In 1954, Ames was awarded an honorary Doctor of Laws by Dartmouth. In 1955 he wo
 <center>
 
 ## Ames Window
+</center>
+One of the most important things when creating the ames window is to adjust the camera orthographically, since if you use a perspective camera it will be possible to perceive depth. To make this concept clearer, the difference between both types of camera is shown below.
+<center>
+<img src="https://i.stack.imgur.com/q1SNB.png" alt="drawing" width="drawing"/>
 
 {{< details "Commands" >}}
 | Key | Description |
