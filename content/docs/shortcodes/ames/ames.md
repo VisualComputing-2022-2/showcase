@@ -39,7 +39,7 @@ In 1954, Ames was awarded an honorary Doctor of Laws by Dartmouth. In 1955 he wo
 | f | Compare |
 |EasyCam Controls | Camera|
 {{< /details >}}
-{{< p5-iframe sketch="/showcase/sketches/amesRoom/amesRoom.js" width="620" height="450" >}}
+{{< p5-iframe sketch="/showcase/sketches/amesRoom/amesRoom.js" width="630" height="425" >}}
 
 ## Conclusions
 
