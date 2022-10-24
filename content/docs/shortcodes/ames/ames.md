@@ -14,7 +14,14 @@ In 1954, Ames was awarded an honorary Doctor of Laws by Dartmouth. In 1955 he wo
 
 ## Ames Window
 
-{{< p5-iframe sketch="/showcase/sketches/amesRoom/amesWindow.js" width="570" height="440" >}}
+{{< details "Commands" >}}
+| Key | Description |
+| -------- | ----------- |
+| e | Sphere|
+| s | Stick |
+| m | Material |
+{{< /details >}}
+{{< p5-iframe sketch="/showcase/sketches/amesRoom/amesWindow.js" width="550" height="550" >}}
 
 ## IRL Ames Room
 
