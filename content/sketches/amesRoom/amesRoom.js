@@ -37,34 +37,34 @@ function setup() {
     //Botones
     //Techo
     buttonC = createButton('');
-    buttonC.position(550,5);
+    buttonC.position(550,0);
     buttonC.size(10,10);
     buttonC.mousePressed(changeCeiling);
     //Izquierda
     buttonL = createButton('');
-    buttonL.position(530,17);
+    buttonL.position(530,12);
     buttonL.size(10,10);
     buttonL.mousePressed(changeLeft);
     //Derecha
     buttonR = createButton('');
-    buttonR.position(570,17);
+    buttonR.position(570,12);
     buttonR.size(10,10);
     buttonR.mousePressed(changeRight);
     //Fondo
     buttonB = createButton('');
-    buttonB.position(550,17);
+    buttonB.position(550,12);
     buttonB.size(10,10);
     buttonB.mousePressed(changeBack);
     //Piso
     buttonF = createButton('');
-    buttonF.position(550,29);
+    buttonF.position(550,24);
     buttonF.size(10,10);
     buttonF.mousePressed(changeFloor);
   
   
     //Movimiento
     buttonF = createButton('Movimiento');
-    buttonF.position(515,55);
+    buttonF.position(515,50);
     buttonF.size(80,30);
     buttonF.mousePressed(changeMovement);
 }
