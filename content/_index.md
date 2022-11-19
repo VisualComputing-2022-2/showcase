@@ -5,9 +5,6 @@ type: docs
 
 # Our Team
 
-
-## Juan Camilo Villota
-I'm a Systems engineering student with interest in web development and big data management. My main hoobies are videogames, watch series and listen to music.
 ## Arturo Quevedo
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 ## Nicolás Sánchez Vargas
