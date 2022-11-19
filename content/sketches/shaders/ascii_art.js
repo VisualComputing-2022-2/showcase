@@ -11,13 +11,13 @@ let images=[];
 
 function preload() {
   //img = loadImage('https://i.imgur.com/LcG0R9w.jpg');
-  let imag1 = loadImage('https://i.imgur.com/LcG0R9w.jpg');
-  let imag2 = loadImage('https://i.imgur.com/Le3VmJg.jpg');
-  let imag3 = loadImage('https://i.imgur.com/FYIILsy.jpg');
-  let imag4 = loadImage('https://i.imgur.com/klEoYK0.jpg');
-  let imag5 = loadImage('https://i.imgur.com/uQUXeDa.jpg');
-  let imag6 = loadImage('https://i.imgur.com/M0vfx1G.jpg');
-  let imag7 = loadImage('https://i.imgur.com/KRLc2lP.jpg');
+  let imag1 = loadImage('https://i.imgur.com/ZQN0ZWb.jpg');
+  let imag2 = loadImage('https://i.imgur.com/s1t9lke.jpg');
+  let imag3 = loadImage('https://i.imgur.com/nx1tU5d.jpg');
+  let imag4 = loadImage('https://i.imgur.com/X9KpdLl.jpg');
+  let imag5 = loadImage('https://i.imgur.com/vgQiIxe.jpg');
+  let imag6 = loadImage('https://i.imgur.com/lRLpaVX.jpg');
+  let imag7 = loadImage('https://i.imgur.com/p82FpvG.jpg');
   images=[imag1,imag2,imag3,imag4,imag5,imag6,imag7]
 }
 
