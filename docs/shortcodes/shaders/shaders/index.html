@@ -1,11 +1,48 @@
-<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content=" Aqui van shaders # Ascii Art # Ascii art visual application:
-Commands Command Description C Change image "><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content=" Aqui van shaders # Ascii Art # Ascii art visual application:
-Commands Command Description C Change image "><meta property="og:type" content="article"><meta property="og:url" content="https://visualcomputing-2022-2.github.io/showcase/docs/shortcodes/shaders/shaders/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2022-11-19T15:00:30-05:00"><title>Shaders | Visual Computing Reports</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
-<script defer src=/showcase/en.search.min.39199bed9594e43dbb7ccfa13f69c3b252d611d5e42ae8e42f77abcaa5281845.js integrity="sha256-ORmb7ZWU5D27fM+hP2nDslLWEdXkKujkL3eryqUoGEU=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Shaders uwu # Glitch Effect Shader # Basado en el código de este video La idea del shader es tener un offset para la coordenada en x donde se dibuja el R y el B. Presione r para limpiar el canvas
+Si se limita y varía el offset con el tiempo, se tiene el efecto de &ldquo;glitch&rdquo; Presione r para limpiar el canvas
+Ascii Art # Ascii art visual application:"><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Shaders uwu # Glitch Effect Shader # Basado en el código de este video La idea del shader es tener un offset para la coordenada en x donde se dibuja el R y el B. Presione r para limpiar el canvas
+Si se limita y varía el offset con el tiempo, se tiene el efecto de &ldquo;glitch&rdquo; Presione r para limpiar el canvas
+Ascii Art # Ascii art visual application:"><meta property="og:type" content="article"><meta property="og:url" content="https://visualcomputing-2022-2.github.io/showcase/docs/shortcodes/shaders/shaders/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2022-11-26T12:06:17-05:00"><title>Shaders | Visual Computing Reports</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
+<script defer src=/showcase/en.search.min.9a08917a5d3d51ea802f1b06f0bc81a1da8853f56f3896eb1c6b9a894b1e256e.js integrity="sha256-mgiRel09UeqALxsG8LyBodqIU/VvOJbrHGuaiUseJW4=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/showcase/><span>Visual Computing Reports</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><span>Shortcodes</span><ul><li><a href=/showcase/docs/shortcodes/ames/ames/>Ames</a></li><li><a href=/showcase/docs/shortcodes/illusions/illusions/>Illusions</a></li><li><a href=/showcase/docs/shortcodes/masking/>Masking</a></li><li><a href=/showcase/docs/shortcodes/shaders/shaders/ class=active>Shaders</a></li></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/showcase/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>Shaders</strong>
-<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#aqui-van-shaders>Aqui van shaders</a><ul><li><a href=#ascii-art>Ascii Art</a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=aqui-van-shaders>Aqui van shaders
-<a class=anchor href=#aqui-van-shaders>#</a></h1><h2 id=ascii-art>Ascii Art
+<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#shaders-uwu>Shaders uwu</a><ul><li><a href=#glitch-effect-shader>Glitch Effect Shader</a></li><li><a href=#ascii-art>Ascii Art</a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=shaders-uwu>Shaders uwu
+<a class=anchor href=#shaders-uwu>#</a></h1><h2 id=glitch-effect-shader>Glitch Effect Shader
+<a class=anchor href=#glitch-effect-shader>#</a></h2><p>Basado en el código de <a href=https://youtu.be/r5YkU5Xu4_E>este video</a><br><br>La idea del shader es tener un offset para la coordenada en x donde se dibuja el R y el B.<br>Presione <code>r</code> para limpiar el canvas</p><iframe id=var_glitched_shader style=width:650px;height:650px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js></script>
+            <script src=https://freshfork.github.io/p5.EasyCam/p5.easycam.js></script>
+            
+            
+            
+            
+            
+            <script src=/showcase/sketches/shaders/var_glitched_shader.js></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe><p>Si se limita y varía el offset con el tiempo, se tiene el efecto de &ldquo;glitch&rdquo;<br>Presione <code>r</code> para limpiar el canvas</p><iframe id=glitched_shader style=width:650px;height:650px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js></script>
+            <script src=https://freshfork.github.io/p5.EasyCam/p5.easycam.js></script>
+            
+            
+            
+            
+            
+            <script src=/showcase/sketches/shaders/glitched_shader.js></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe><h2 id=ascii-art>Ascii Art
 <a class=anchor href=#ascii-art>#</a></h2><p>Ascii art visual application:</p><details><summary>Commands</summary><div class=markdown-inner><table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td>C</td><td>Change image</td></tr></tbody></table></div></details><iframe id=ascii_art style=width:430px;height:430px srcdoc="
         <!DOCTYPE html>
         <html>
@@ -23,5 +60,5 @@ Commands Command Description C Change image "><meta property="og:type" content="
           <body>
           </body>
         </html>
-      "></iframe></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/VisualComputing-2022-2/showcase/commit/0a52b9a187af2251a61896b002c388100f969373 title='Last modified by Arturo | November 19, 2022' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
-<span>November 19, 2022</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#aqui-van-shaders>Aqui van shaders</a><ul><li><a href=#ascii-art>Ascii Art</a></li></ul></li></ul></nav></div></aside></main></body></html>
+      "></iframe></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/VisualComputing-2022-2/showcase/commit/78ffca322662b8261f5b8cdcfa86e640b1587ea3 title='Last modified by Arturo | November 26, 2022' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
+<span>November 26, 2022</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#shaders-uwu>Shaders uwu</a><ul><li><a href=#glitch-effect-shader>Glitch Effect Shader</a></li><li><a href=#ascii-art>Ascii Art</a></li></ul></li></ul></nav></div></aside></main></body></html>
