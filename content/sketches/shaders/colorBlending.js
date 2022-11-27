@@ -1,16 +1,16 @@
 var blendModes;
-var blendModeIndex;
+var blendModeIndex = 0;
 var col=1;
-  blendModeIndex = 0;
 
 function setup() {
-  blendModes = [
-    BLEND, DARKEST, LIGHTEST, DIFFERENCE, MULTIPLY, EXCLUSION, SCREEN, REPLACE, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN, ADD
-  ];
+    blendModes = [LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION, SCREEN, OVERLAY];
+    createCanvas(400, 400);
 
-  createCanvas(400, 400);
-  blendMode(blendModes[blendModeIndex]);
-  strokeWeight(0);  
+    blendMode(blendModes[blendModeIndex]);
+
+    text(blendModes[blendModeIndex],180,25);  
+    strokeWeight(0);  
+
     fill(255,0,0);
     square(0,0,200);
     fill(0,255,0);
@@ -21,38 +21,35 @@ function setup() {
     square(200,200,200);
 }
 
-function mousePressed() { 
-  
+function mousePressed() {   
   blendModeIndex = (blendModeIndex + 1) % blendModes.length;
   console.log(blendModes[blendModeIndex]);
-  
-  if(col==1){
-    col++;
-  }
-  else if(col==2){
-    col++;
-  }
-  else if(col==3){
-    col=1;
-  }
+  setup();  
+  circle(200,200,200); 
 }
 
-function draw() {
-  blendMode(LIGHTEST);  
-  if (col==1){
- 
-    setup();fill('red')
-    circle(200,200,200)   
-  }
-  else if (col==2){
+function draw() {  
+}
 
-    setup();fill('blue')
-    circle(200,200,200)   
-  }
-  else if (col==3){
-
-    setup();fill(0,255,0)
-    circle(200,200,200)
- 
-  }
+function keyPressed() {
+    switch (key) {
+      case "r":            
+          setup();
+          fill('red');
+          circle(200,200,200);  
+          col=1;
+          break;
+      case "b":
+          setup();
+          fill('blue');
+          circle(200,200,200);
+          col=2;
+          break;   
+      case "g":
+          setup();
+          fill(0,255,0);
+          circle(200,200,200);
+          col=3;
+          break;
+    }
 }
