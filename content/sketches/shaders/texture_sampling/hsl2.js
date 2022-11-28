@@ -10,12 +10,12 @@ let mousePos;
 function preload() {
     Shader = readShader("/showcase/sketches/shaders/texture_sampling/hsl.frag", { varyings: Tree.texcoords2 }
     );
-    tortuga = loadImage("https://i.imgur.com/sNrljjS.jpg");
+    tortuga = loadImage("https://i.imgur.com/Jvh1OQm.jpeg");
   }
   
   
 function setup() {
-    createCanvas(700, 500, WEBGL);
+    createCanvas(650, 500, WEBGL);
     noStroke();
     textureMode(NORMAL);
     shader(Shader);
