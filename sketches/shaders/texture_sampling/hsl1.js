@@ -15,7 +15,7 @@ function preload() {
 
 
 function setup() {
-  createCanvas(700, 500, WEBGL);
+  createCanvas(650, 500, WEBGL);
   noStroke();
   textureMode(NORMAL);
   shader(Shader);
