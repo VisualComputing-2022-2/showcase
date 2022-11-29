@@ -3,7 +3,7 @@ var blendModeIndex = 0;
 var col=1;
 
 function setup() {
-    blendModes = [LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION, SCREEN, OVERLAY];
+    blendModes = [ADD, DIFFERENCE, LIGHTEST, DARKEST];
     createCanvas(400, 400);
 
     blendMode(blendModes[blendModeIndex]);
