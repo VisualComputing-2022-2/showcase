@@ -11,7 +11,6 @@ void main() {
   vec2 uv = vTexCoord;
   uv.y = 1.0 - uv.y;
   
-  //vec2 offset = vec2(noise * 0.05, 0.0);
   vec2 offset = vec2(noise * 0.5, 0.0);
   
   vec3 col;
